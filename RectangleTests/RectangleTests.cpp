@@ -6,6 +6,8 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 extern "C" {
 	int getPerimeter(int* length, int* width);
 	int getArea(int* length, int* width);
+	void setLength(int input, int* length);
+	void setWidth(int input, int* width);
 }
 
 namespace RectangleTests
@@ -13,7 +15,7 @@ namespace RectangleTests
 	TEST_CLASS(RectangleTests)
 	{
 	public:
-		TEST_METHOD(TestGetPerimeter_ValidInput)
+		TEST_METHOD(TestGetPerimeter)
 		{
 			int length = 10;
 			int width = 5;
